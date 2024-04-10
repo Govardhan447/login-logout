@@ -1,26 +1,27 @@
 import {Component} from 'react'
-import Loginbutton from '.src/components/Login/index'
-import Logoutbutton from '.src/components/Logout/index'
-import Message from '.src/components/Message/index'
+
+import Message from '../Message'
+import Loginbutton from '../Login'
+import Logoutbutton from '../Logout'
+
 import './index.css'
 
 let message = null
 class Home extends Component {
-  state = {login: true}
+  state = {loginStatus: 'true'}
 
-  clickLogin = () =>
-    this.setState(prevState => ({login: (prevState.login = false)}))
-  clickLogout = () =>
-    this.setState(prevState => ({login: (prevState.login = true)}))
+  clickLogin = () => this.setState({loginStatus: 'true'})
+
+  clickLogout = () => this.setState({loginStatus: 'false'})
 
   renderAuthButton = () => {
-    const {login} = this.state
-    if (login === true) {
+    const {loginStatus} = this.state
+    if (loginStatus === true) {
       message = 'Welcome User'
-      return <Logoutbutton />
+      return <Logoutbutton onClick={this.clickLogout} />
     }
     message = 'Please Login'
-    return <Loginbutton />
+    return <Loginbutton onClick={this.clickLogin} />
   }
 
   render() {
@@ -34,5 +35,4 @@ class Home extends Component {
     )
   }
 }
-
 export default Home
