@@ -1,4 +1,4 @@
-import './Message/index.css'
+import './index.css'
 
 const Messsage = prop => {
   const {message} = prop
