@@ -1,5 +1,14 @@
-import "./index.css"
+import {Component} from 'react'
+import './index.css'
 
-const Logoutbutton = () => <button className="button" type="button">Login</button>
+class LogoutButton extends Component {
+  render() {
+    return (
+      <button className="button" type="button" onClick={this.clickLogout}>
+        Logout
+      </button>
+    )
+  }
+}
 
-export default Logoutbutton
+export default LogoutButton
