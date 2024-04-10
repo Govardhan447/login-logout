@@ -1,9 +1,5 @@
-import './index.css'
+import "./index.css"
 
-const Logoutbutton = () => (
-  <button className="button" onClick={this.clickLogout}>
-    Logout
-  </button>
-)
+const Logoutbutton = () => <button className="button">Login</button>
 
 export default Logoutbutton
