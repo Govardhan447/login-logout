@@ -1,4 +1,4 @@
-import './Logout/index.css'
+import './index.css'
 
 const Logoutbutton = () => (
   <button className="button" onClick={this.clickLogout}>
